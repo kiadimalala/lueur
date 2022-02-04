@@ -8,6 +8,9 @@ const ProjectCard = ({ content }) => {
     <Wrapper>
       <div className="panel">
         <img className="img" src={background} />
+        {/**<div className="info">
+          <img className="logo" src={background} />
+  </div>*/}
       </div>
     </Wrapper>
   );
@@ -21,6 +24,15 @@ const Wrapper = styled.div`
       width: 100%;
       object-fit: cover;
       object-position: center;
+    }
+    .info {
+      width: 100%;
+      height: 100%;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
 `;

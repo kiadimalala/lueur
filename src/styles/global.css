@@ -1,0 +1,12 @@
+html{
+font-family: 'Barlow';
+font-size: 19px;
+line-height: 1.5;
+font-weight: 400;
+color: #3c3c3c
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}

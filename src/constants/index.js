@@ -5,5 +5,6 @@ export const COLORS = {
   greyJoy: "#a7a7a7",
   whiteChapel: "#fff",
   whiteHouse: "#fafafa",
-  whiteChapelTrans:`rgba(255,255,255,.7)`
+  whiteChapelTrans: `rgba(255,255,255,.7)`,
+  purpleRain: "#b21381",
 };

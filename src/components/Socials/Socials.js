@@ -16,9 +16,9 @@ const socials = [
   { name: "youtube", icon: faInstagram },
 ];
 
-const Socials = ({ rounded }) => {
+const Socials = ({ className, rounded }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className ? className : ""}>
       {socials.map((s) => (
         <li className={`${rounded ? "rounded" : "link "}`}>
           <FontAwesomeIcon key={s.name} icon={s.icon} />
@@ -33,6 +33,7 @@ const Wrapper = styled.ul`
   align-items: center;
   margin: 0;
   padding: 0;
+  cursor: pointer;
   .link {
     list-style: none;
     padding-left: 15px;
@@ -55,6 +56,14 @@ const Wrapper = styled.ul`
     margin-left: 15px;
     border-radius: 20px;
     color: ${COLORS.greyJoy};
+  }
+  .rounded:hover {
+    background-color: ${COLORS.purpleRain};
+    color: ${COLORS.whiteChapel};
+  }
+
+  &.socials li:first-child {
+    margin-left: 0 !important;
   }
 `;
 

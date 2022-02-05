@@ -7,4 +7,6 @@ export const COLORS = {
   whiteHouse: "#fafafa",
   whiteChapelTrans: `rgba(255,255,255,.7)`,
   purpleRain: "#b21381",
+  blackHole: "#13100d",
+  blueTeal: "#7fcac5",
 };

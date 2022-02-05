@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-function BaseButton({ className, children, label }) {
+function BaseButton({ className, children, label, onClick }) {
   return (
-    <Button className={className ? className : ""}>
+    <Button onClick={onClick} className={className ? className : ""}>
       {label && <span className="label">{label}</span>}
       {children && <span className="child">{children}</span>}
     </Button>
@@ -29,13 +29,13 @@ const Button = styled.button`
     background-color: transparent;
     color: #13100d;
     transition: all 0.17s ease-in-out;
-    padding:0 25px;
-   .child{
-        width:20px;
-        height: 20px;
-        display:flex;
-        align-items:center;
-        font-size:17px;
+    padding: 0 25px;
+    .child {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
     }
   }
   &.btn_com:hover {
@@ -43,7 +43,7 @@ const Button = styled.button`
     border-color: #13100d;
     background-image: linear-gradient(90deg, #13100d 50%, transparent 50%);
     background-position-x: 0;
-   .child {
+    .child {
       color: #fff !important;
     }
   }

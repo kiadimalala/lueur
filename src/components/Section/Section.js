@@ -5,7 +5,12 @@ import { COLORS } from "../../constants/index";
 
 const Section = ({ children, className }) => {
   const handlescroll = () => {
-    console.log(window.scrollY);
+    if (window.scrollY > 1950 && window.scrollY < 3350) {
+      let t = 130;
+      if (window.scroll > 1950) {
+       
+      }
+    }
   };
 
   React.useEffect(() => {
@@ -132,13 +137,14 @@ const Wrapper = styled.div`
   &.about {
     padding: 65px 0;
     background-image: url(https://media.lueurexterne.com/icone-smile.svg);
-    background-position-y: calc(100% + 44.35px);
+    background-position-y: calc(100% + auto);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
     .container {
       padding: 0 40px;
       margin: 0 120px;
       max-width: 1200px;
       margin: auto;
-
       .grid_1 {
         display: flex;
         div:first-child {

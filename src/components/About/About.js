@@ -22,10 +22,10 @@ const About = () => {
               mais des solutions sur-mesure, pensées et créées
             </div>
           </div>
-          <div>2</div>
+          <div></div>
         </div>
         <div className="grid_2">
-          <div>3</div>
+          <div></div>
           <div>
             <div>
               <div>

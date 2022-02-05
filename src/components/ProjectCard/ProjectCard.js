@@ -17,7 +17,7 @@ const ProjectCard = ({ content }) => {
 };
 
 const Wrapper = styled.div`
-  padding-left: 15px;
+  margin-top: -10px;
   .panel {
     position: relative;
     .img {

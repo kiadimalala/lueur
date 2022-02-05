@@ -27,7 +27,8 @@ const BaseTitle = ({ className, title, label, sub, multiple }) => {
   );
 };
 const TitleWrapper = styled.div`
-  &.project_title {
+  &.project_title,
+  &.values_title {
     width: 100%;
     height: 76px;
     display: flex;

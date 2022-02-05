@@ -4,6 +4,15 @@ import styled from "styled-components";
 import { COLORS } from "../../constants/index";
 
 const Section = ({ children, className }) => {
+  const handlescroll = () => {
+    console.log(window.scrollY);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handlescroll);
+    return () => window.removeEventListener("scroll", handlescroll);
+  }, []);
+
   return (
     <Wrapper className={className ? className : ""}>
       {children && children}
@@ -95,7 +104,6 @@ const Wrapper = styled.div`
           grid-gap: 20px;
           .column {
             width: 100%;
-            padding-left: 40px;
             align-items: center;
           }
         }
@@ -114,7 +122,85 @@ const Wrapper = styled.div`
         .grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 20px;
         }
+      }
+    }
+  }
+
+  //styling about sblock
+  &.about {
+    padding: 65px 0;
+    background-image: url(https://media.lueurexterne.com/icone-smile.svg);
+    background-position-y: calc(100% + 44.35px);
+    .container {
+      padding: 0 40px;
+      margin: 0 120px;
+      max-width: 1200px;
+      margin: auto;
+
+      .grid_1 {
+        display: flex;
+        div:first-child {
+          width: 66.66%;
+          h2 {
+            margin: 0 0 10px 0;
+            text-align: left !important;
+            font-size: 38px;
+            line-height: 1.1;
+            font-weight: 300;
+            color: ${COLORS.pinkPanther};
+          }
+          div {
+            width: 100%;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-right: 0;
+          }
+        }
+        div:last-child {
+          width: 33.33%;
+        }
+      }
+      .grid_2 {
+        margin-top: 40px;
+        margin-left: -40px;
+        display: flex;
+        justify-content: space-evenly;
+        div:first-child {
+          width: 50%;
+          padding-left: 40px;
+        }
+        div:last-child {
+          width: 50%;
+          padding-left: 40px;
+          div {
+            width: 450px;
+            div {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .grid_3 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  //styling values block
+  &.values {
+    padding: 65px 0;
+    .container {
+      padding: 0 40px;
+      margin: 0 120px;
+      max-width: 1200px;
+      margin: auto;
+      .grid {
+        margin-top: 40px;
+        margin-left: -40px;
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }

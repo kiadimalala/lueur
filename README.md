@@ -7,6 +7,9 @@
   Gatsby minimal starter
 </h1>
 
+**Build version**
+[Demo (WIP)](https://lueurclone.gatsbyjs.io/)
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

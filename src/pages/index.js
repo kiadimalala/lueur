@@ -9,7 +9,7 @@ import Project from "../components/Project/Project";
 import About from "../components/About/About";
 import Values from "../components/Values/Values";
 import Com from "../components/Com/Com";
-import Details from "../components/Details/Details";
+import Footer from "../components/Footer/Footer";
 // markup
 const IndexPage = () => {
   return (
@@ -21,7 +21,7 @@ const IndexPage = () => {
       <About />
       <Values />
       <Com />
-      <Details />
+      <Footer />
     </Layout>
   );
 };

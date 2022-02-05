@@ -22,7 +22,7 @@ const Services = [
   { name: "Photo & Vidéo", link: "" },
 ];
 
-function Details() {
+function Footer() {
   return (
     <Wrapper>
       <Section className={"details"}>
@@ -88,6 +88,27 @@ function Details() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </Section>
+      <Section className="bottom">
+        <div className="container">
+          <div className="grid">
+            <div>
+              <div className="item">
+                <div className="icon">
+                  <VscArrowRight />
+                </div>
+                <div className="name">Mentions Légales</div>
+              </div>
+              <div className="item">
+                <div className="icon">
+                  <VscArrowRight />
+                </div>
+                <div className="name">Données personnelles</div>
+              </div>
+            </div>
+            <div></div>
           </div>
         </div>
       </Section>
@@ -173,6 +194,23 @@ export const Wrapper = styled.div`
           }
       }
 }
+.bottom{
+  padding: 40px 0;
+  .container{
+    padding:0 40px;
+    .grid{
+      display:flex;
+      align-items:center;
+      justify-content:space-evenly;
+      div:first-child{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:flex-end
+      }
+    }
+  }
+}
 `;
 
-export default Details;
+export default Footer;

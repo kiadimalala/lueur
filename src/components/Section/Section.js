@@ -204,6 +204,42 @@ const Wrapper = styled.div`
       }
     }
   }
+
+  //styling coms block
+  &.com {
+    width: 100%;
+    padding: 65px 0;
+    margin:130px 0 0 0;
+    background-color:${COLORS.pinkPanther};
+    .container {
+      padding: 0 40px;
+      margin: 0 120px;
+      max-width: 1200px;
+      margin: auto;
+      background-image: url("https://media.lueurexterne.com/icone-smile.svg");
+      background-repeat: no-repeat;
+      .content{
+        margin-left:-40px;
+        margin-top:40px;
+        .column{
+          display: flex;
+          width: 100%;
+          justify-content:center;
+          flex-direction:column;
+          align-items:center;
+          .text{
+            color:${COLORS.whiteChapel};
+            margin-bottom:30px;
+            text-align:center;
+          }
+          .btn_container{
+            margin-top:10px;
+          }
+        }
+      }
+}
+    }
+  }
 `;
 
 export default Section;

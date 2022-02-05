@@ -3,8 +3,24 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../../constants";
 
+import { VscArrowRight } from "react-icons/vsc";
+
 import Section from "../Section/Section";
 import Socials from "../Socials/Socials";
+
+const Pages = [
+  { name: "L'agence", link: "" },
+  { name: "Recrutement", link: "" },
+  { name: "Nous contacter", link: "" },
+  { name: "Blog", link: "" },
+];
+const Services = [
+  { name: "Studio graphique", link: "" },
+  { name: "Web & Digital Marketing", link: "" },
+  { name: "Digitalisation de processus", link: "" },
+  { name: "Conseil & Stratégie", link: "" },
+  { name: "Photo & Vidéo", link: "" },
+];
 
 function Details() {
   return (
@@ -44,9 +60,33 @@ function Details() {
             </div>
             <div className="agency_links">
               <h1>Lueur Externe</h1>
+              <ul className="links_container">
+                {Pages.map((p, index) => (
+                  <li>
+                    <div className="item">
+                      <div className="icon">
+                        <VscArrowRight />
+                      </div>
+                      <div className="name">{p.name}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="agency_services">
+            <div className="agency_links">
               <h1>Nos Services</h1>
+              <ul className="links_container">
+                {Services.map((p, index) => (
+                  <li>
+                    <div className="item">
+                      <div className="icon">
+                        <VscArrowRight />
+                      </div>
+                      <div className="name">{p.name}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -104,6 +144,31 @@ export const Wrapper = styled.div`
           .agency_socials{
               .socials_container{
                   margin-top:30px;
+              }
+          }
+          .agency_links{
+              ul{
+                  margin:0;
+                  padding:0;
+              }
+              ul li{
+                  list-style:none;
+              }
+              ul li .item{
+                  display:flex;
+                  align-items:center;
+                  margin-bottom:10px;
+                .icon{
+                    display:flex;
+                    align-items:center;
+                    color:${COLORS.pinkPanther}
+                }
+                .name{
+                    padding-left:15px;
+                    font-size: 17px;
+                    line-height: 1.4;
+                 
+                }
               }
           }
       }
